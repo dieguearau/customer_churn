@@ -23,11 +23,11 @@ El proyecto sigue una metodología estructurada que incluye las siguientes etapa
    - Análisis de correlación
 
 2. **Modelado y Evaluación**:
-   - Aplicación de varios modelos de machine learning como Random Forest, Support Vector Machine, y XGBoost.
-   - Evaluación de los modelos utilizando métricas como precisión, recall, F1-score, y la curva ROC-AUC.
+   - Aplicación de varios modelos de machine learning como Random Forest, Redes neuronales y XGBoost, entre otros.
+   - Evaluación de los modelos utilizando métricas como precisión, recall, F1-score.
 
 3. **Optimización de Hiperparámetros**:
-   - Uso de técnicas como Grid Search y Random Search para optimizar los modelos.
+   - Uso de framework de Optuna para la búsqueda de hiperparámetros.
 
 4. **Implementación de Estrategias de Retención**:
    - Basado en los resultados del modelo, se proponen estrategias específicas para mejorar la retención de clientes.
