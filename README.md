@@ -15,7 +15,7 @@ Para este análisis, se ha utilizado el conjunto de datos de [Customer Churn Dat
 
 ## Metodología
 
-El proyecto sigue una metodología estructurada que incluye las siguientes etapas:
+El proyecto se encuentra en el archivo [Customer_Churn.ipynb](Customer_Churn.ipynb) y sigue una metodología estructurada que incluye las siguientes etapas:
 
 1. **Exploración y preprocesamiento de datos**:
    - Análisis descriptivo
