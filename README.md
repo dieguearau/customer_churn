@@ -5,19 +5,7 @@
 
 ## Introducción
 
-En este proyecto, se aborda el problema de la **tasa de abandono de clientes** (churn) en una empresa. Esta métrica representa el porcentaje de clientes o suscriptores que cancelan un producto o servicio en un período determinado. Su fórmula es:
-
-$$
-\text{Churn Rate} = \frac{\text{N° de clientes que se dieron de baja durante el período}}{\text{N° total de clientes al inicio del período}} \times 100
-$$
-
-Dónde:
-
-- **N° de clientes que se dieron de baja durante el período**: Total de clientes que dejaron de utilizar los servicios de la empresa en el período analizado.
-- **N° total de clientes al inicio del período**: Cantidad de clientes que la empresa tenía al comienzo del período analizado.
-
-
- Reducir la tasa de churn es crucial para cualquier empresa, ya que retener clientes es generalmente más rentable que adquirir nuevos.
+En este proyecto, se aborda el problema de la **tasa de abandono de clientes** (churn) en una empresa. El churn se refiere a la cantidad de clientes que dejan de utilizar los servicios de una compañía en un período determinado. Reducir la tasa de churn es crucial para cualquier empresa, ya que retener clientes es generalmente más rentable que adquirir nuevos.
 
 El objetivo principal de este proyecto es identificar el modelo de machine learning que mejor se ajuste a los datos y ofrezca la mayor capacidad predictiva para detectar a los clientes con mayor probabilidad de darse de baja del servicio. Esto permitirá implementar estrategias de retención más efectivas y, en consecuencia, mejorar la retención de clientes y la sostenibilidad a largo plazo de la empresa.
 
