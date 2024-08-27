@@ -36,71 +36,9 @@ El proyecto sigue una metodología estructurada que incluye las siguientes etapa
 
 El código utilizado en este proyecto está estructurado en un Jupyter Notebook, el cual contiene celdas de código y explicaciones detalladas. A continuación, se describen algunas de las secciones clave del notebook:
 
-### 1. Importación de Librerías y Carga de Datos
-```python
-# Importación de librerías
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import classification_report, confusion_matrix
 
-# Carga de datos
-df = pd.read_csv('customer_churn.csv')
-```
-
-### 2. Exploración de Datos
-```python
-# Exploración inicial de los datos
-print(df.head())
-print(df.info())
-```
-
-### 3. Preprocesamiento de Datos
-```python
-# Preprocesamiento de los datos
-df = df.dropna()
-df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
-df = pd.get_dummies(df, drop_first=True)
-```
-
-### 4. Modelado
-```python
-# Entrenamiento de un modelo de Random Forest
-from sklearn.ensemble import RandomForestClassifier
-
-X = df.drop('Churn', axis=1)
-y = df['Churn']
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=101)
-
-rfc = RandomForestClassifier()
-rfc.fit(X_train, y_train)
-
-# Predicción y evaluación del modelo
-predictions = rfc.predict(X_test)
-print(classification_report(y_test, predictions))
-```
-
-### 5. Optimización de Hiperparámetros
-```python
-# Optimización de hiperparámetros con GridSearch
-from sklearn.model_selection import GridSearchCV
-
-param_grid = {
-    'n_estimators': [100, 200, 300],
-    'max_depth': [10, 20, 30],
-    'min_samples_split': [2, 5, 10]
-}
-
-grid_rfc = GridSearchCV(estimator=rfc, param_grid=param_grid, cv=5)
-grid_rfc.fit(X_train, y_train)
-```
-
-### Conclusión
 
 Este proyecto proporciona una guía completa para la implementación de un modelo de machine learning orientado a la predicción de churn. La combinación de técnicas de preprocesamiento, modelado, y optimización asegura que el modelo final tenga una alta capacidad predictiva, lo que es esencial para cualquier estrategia de retención de clientes.
 
 ---
 
-Este archivo README está diseñado para proporcionar una visión general clara y detallada del proyecto, y debería ser un buen punto de partida para cualquier persona interesada en comprender y replicar el análisis realizado.
