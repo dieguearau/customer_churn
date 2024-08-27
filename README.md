@@ -1,7 +1,7 @@
 
 # Predicción de Tasa de Abandono (Churn) de Clientes
 
-![Churn Rate](Churn_rate_img.png)
+![Churn Rate](Fig/Churn_rate_img.png)
 
 ## Introducción
 
