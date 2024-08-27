@@ -1,7 +1,7 @@
 
 # Predicción de Tasa de Abandono (Churn) de Clientes
 
-<img src="Fig/Churn_rate_img.png" alt="Churn Rate" width="50%"/>
+<img src="Fig/Churn_rate_img.png" alt="Churn Rate" width="70%"/>
 
 ## Introducción
 
@@ -31,6 +31,7 @@ El proyecto sigue una metodología estructurada que incluye las siguientes etapa
 
 4. **Implementación de Estrategias de Retención**:
    - Basado en los resultados del modelo, se proponen estrategias específicas para mejorar la retención de clientes.
+
 
 
 Este proyecto proporciona una guía completa para la implementación de un modelo de machine learning orientado a la predicción de churn. La combinación de técnicas de preprocesamiento, modelado, y optimización asegura que el modelo final tenga una alta capacidad predictiva, lo que es esencial para cualquier estrategia de retención de clientes.
