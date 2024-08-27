@@ -1,0 +1,48 @@
+# Paleta de colores ajustada
+pal1 = {0: "#ffe799", 1: "#fa6343"}
+
+# Creación de subplots
+fig, axes = plt.subplots(4, 4, figsize=(12, 12))
+fig.suptitle('Comparación de variables por Churn', fontsize=16, fontweight='bold')
+
+# Gráfico A: Edad
+sns.boxplot(x='Churn', y='Age', data=customer_train, ax=axes[0, 0], palette=pal1, hue='Churn', legend=False)
+sns.histplot(customer_train, y='Age', hue='Churn', multiple='dodge', ax=axes[0, 1], palette=pal1, element="bars", bins=10, legend=False)
+
+# Gráfico B: Llamadas a soporte
+sns.boxplot(x='Churn', y='Support Calls', data=customer_train, ax=axes[0, 2], palette=pal1, hue='Churn', legend=False)
+sns.histplot(customer_train, y='Support Calls', hue='Churn', multiple='dodge', ax=axes[0, 3], palette=pal1, element="bars", bins=10, legend=False)
+
+# Gráfico C: Última interacción
+sns.boxplot(x='Churn', y='Last Interaction', data=customer_train, ax=axes[1, 0], palette=pal1, hue='Churn', legend=False)
+sns.histplot(customer_train, y='Last Interaction', hue='Churn', multiple='dodge', ax=axes[1, 1], palette=pal1, element="bars", bins=10, legend=False)
+
+# Gráfico D: Permanencia
+sns.boxplot(x='Churn', y='Tenure', data=customer_train, ax=axes[1, 2], palette=pal1, hue='Churn', legend=False)
+sns.histplot(customer_train, y='Tenure', hue='Churn', multiple='dodge', ax=axes[1, 3], palette=pal1, element="bars", bins=10, legend=False)
+
+# Gráfico E: Retraso en el pago
+sns.boxplot(x='Churn', y='Payment Delay', data=customer_train, ax=axes[2, 0], palette=pal1, hue='Churn', legend=False)
+sns.histplot(customer_train, y='Payment Delay', hue='Churn', multiple='dodge', ax=axes[2, 1], palette=pal1, element="bars", bins=10, legend=False)
+
+# Gráfico F: Frecuencia de uso
+sns.boxplot(x='Churn', y='Usage Frequency', data=customer_train, ax=axes[2, 2], palette=pal1, hue='Churn', legend=False)
+sns.histplot(customer_train, y='Usage Frequency', hue='Churn', multiple='dodge', ax=axes[2, 3], palette=pal1, element="bars", bins=10, legend=False)
+
+# Gráfico G: Gasto Total
+sns.boxplot(x='Churn', y='Total Spend', data=customer_train, ax=axes[3, 0], palette=pal1, hue='Churn', legend=False)
+sns.histplot(customer_train, y='Total Spend', hue='Churn', multiple='dodge', ax=axes[3, 1], palette=pal1, element="bars", bins=10, legend=False)
+
+fig.delaxes(axes[3, 2])
+fig.delaxes(axes[3, 3])
+
+axes[0, 0].set_title('Edad', fontsize=14, ha='center')
+axes[0, 2].set_title('Llamadas de soporte', fontsize=14, ha='center')
+axes[1, 0].set_title('Última interacción', fontsize=14, ha='center')
+axes[1, 2].set_title('Permanencia', fontsize=14, ha='center')
+axes[2, 0].set_title('Demora en el pago', fontsize=14, ha='center')
+axes[2, 2].set_title('Frecuencia de uso', fontsize=14, ha='center')
+axes[3, 0].set_title('Gasto Total', fontsize=14, ha='center')
+
+plt.tight_layout(rect=[0, 0, 1, 0.96])
+plt.show()
